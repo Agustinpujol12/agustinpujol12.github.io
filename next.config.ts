@@ -1,42 +1,25 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 🚀 Exporta la app como estática (necesario para GitHub Pages)
+  // 🚀 Necesario para GitHub Pages (export estático)
   output: "export",
 
-  // 🚨 Opcional: ignorar errores en build (lo traías de Firebase)
-  // Lo podés dejar, pero si querés más control eliminá esto.
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  // 🖼️ Configuración de imágenes
+  // ✅ Evita que Next/Image intente optimizar en runtime (no hay servidor en Pages)
   images: {
-    unoptimized: true, // Obligatorio para export estático
+    unoptimized: true,
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placehold.co",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "picsum.photos",
-        pathname: "/**",
-      },
+      { protocol: "https", hostname: "placehold.co", pathname: "/**" },
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+      { protocol: "https", hostname: "picsum.photos", pathname: "/**" },
     ],
   },
 
-  // ➕ Opcional: URLs con slash final (evita 404 en GitHub Pages)
+  // ➕ Recomendado en Pages para evitar 404 en rutas “carpeta”
   trailingSlash: true,
+
+  // (Opcional) Lo traías de antes; si querés builds estrictos, quitá esto.
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
 };
 
 export default nextConfig;
