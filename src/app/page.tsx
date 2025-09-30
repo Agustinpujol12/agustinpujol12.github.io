@@ -17,7 +17,7 @@ export default function Home() {
         <ProjectsSection />
         <SkillsSection />
         <CvGeneratorSection />
-        <ContactSection />F
+        <ContactSection />
       </main>
       <Footer />
     </div>
