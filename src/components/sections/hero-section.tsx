@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Github, FileDown } from 'lucide-react';
-import { personalInfo } from '@/lib/data';
+import { Github } from "lucide-react";
+import { personalInfo } from "@/lib/data";
 
 export function HeroSection() {
   return (
@@ -19,18 +19,19 @@ export function HeroSection() {
             <Button asChild size="lg">
               <a href="#projects">Ver Proyectos Destacados</a>
             </Button>
-            <div className="flex gap-4">
-                <Button variant="secondary" asChild size="lg">
-                    <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-5 w-5" /> GitHub
-                    </a>
-                </Button>
-                <Button variant="secondary" asChild size="lg">
-                    <a href="#cv-generator">
-                        <FileDown className="mr-2 h-5 w-5" /> Generar CV
-                    </a>
-                </Button>
-            </div>
+            <Button variant="secondary" asChild size="lg">
+              <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-5 w-5" /> GitHub
+              </a>
+            </Button>
+            {/*
+            ⚠️ Cuando migres a Vercel o API externa, podés reactivar:
+            <Button variant="secondary" asChild size="lg">
+              <a href="#cv-generator">
+                <FileDown className="mr-2 h-5 w-5" /> Generar CV
+              </a>
+            </Button>
+            */}
           </div>
         </div>
       </div>

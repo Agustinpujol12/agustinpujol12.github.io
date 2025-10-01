@@ -4,7 +4,9 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
-import { CvGeneratorSection } from "@/components/sections/cv-generator-section";
+// ❌ Server Actions no son soportadas en export estático.
+// ⤵️ Sacamos temporalmente la sección del generador de CV.
+// import { CvGeneratorSection } from "@/components/sections/cv-generator-section";
 import { ContactSection } from "@/components/sections/contact-section";
 
 export default function Home() {
@@ -16,7 +18,7 @@ export default function Home() {
         <AboutSection />
         <ProjectsSection />
         <SkillsSection />
-        <CvGeneratorSection />
+        {/* <CvGeneratorSection /> */}
         <ContactSection />
       </main>
       <Footer />
