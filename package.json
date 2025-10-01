@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev -p 9002",
     "build": "next build",
-    "build:static": "next build && next export -o docs && node -e \"require('fs').mkdirSync('docs',{recursive:true}); require('fs').writeFileSync('docs/.nojekyll','')\"",
-    "preview:static": "npx serve docs -p 5000",
+    "build:local": "powershell -NoProfile -Command \"$env:NEXT_PUBLIC_BASE_PATH=''; npm run build\"",
+    "build:pages": "powershell -NoProfile -Command \"$env:NEXT_PUBLIC_BASE_PATH='/' + 'TU_REPO'; Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue; npm run build; Copy-Item -Recurse -Force out docs\"",
+    "preview:local": "npx serve out -p 5000",
+    "preview:pages": "npx serve docs -p 5000",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
