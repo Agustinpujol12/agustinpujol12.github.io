@@ -15,7 +15,8 @@ coverage/
 
 # ⚡ Next.js
 .next/
-out/        # generado por `next export`
+out/        # generado por `next build` (output temporal, NO subir)
+# ⚠️ Importante: NO ignorar docs/ porque lo usamos para GitHub Pages
 
 # 🚀 Producción
 build/
