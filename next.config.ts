@@ -1,18 +1,17 @@
 /** @type {import('next').NextConfig} */
-const repo = "TU_REPO"; // nombre EXACTO del repo
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""; // ← control por env
-
 module.exports = {
+  // Export estático (genera la carpeta `out/` al hacer `next build`)
   output: "export",
 
-  // Si basePath está vacío, no setear estas props
-  basePath: basePath || undefined,
-  assetPrefix: basePath ? `${basePath}/` : undefined,
+  // Evita optimización de imágenes en runtime (Pages no tiene servidor)
+  images: {
+    unoptimized: true,
+  },
 
-  images: { unoptimized: true },
+  // Evita 404 en URLs tipo carpeta
   trailingSlash: true,
 
+  // (Opcional) si querés builds estrictos, quitá estos ignores
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
 };
