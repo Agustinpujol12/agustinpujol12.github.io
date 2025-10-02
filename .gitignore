@@ -55,3 +55,6 @@ next-env.d.ts
 # 🔥 Firebase
 firebase-debug.log
 firestore-debug.log
+
+.tmp.drivedownload/
+.tmp.driveupload/
