@@ -20,18 +20,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+
       - name: Install
         run: npm ci
+
       - name: Build (Next static export)
         run: |
-          npm run build
-          npx next export
-          touch out/.nojekyll
+          npm run build           # genera /out porque tenés output:"export"
+          touch out/.nojekyll     # habilita servir la carpeta _next/ en Pages
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
