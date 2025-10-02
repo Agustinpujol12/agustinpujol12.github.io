@@ -15,10 +15,8 @@ coverage/
 
 # ⚡ Next.js
 .next/
-out/        # generado por `next build` (output temporal, NO subir)
-
-# ⚠️ Importante: NO ignorar docs/ entero porque lo usamos para GitHub Pages
-# pero sí ignorar los compilados internos que cambian todo el tiempo.
+out/              # generado por `next build` (export estático), NO subir
+docs/             # viejo método de deploy, mantener ignorado
 
 # 🚀 Producción
 build/
@@ -29,6 +27,9 @@ Thumbs.db
 desktop.ini
 *.pem
 *.tmp
+
+# Google Drive temporales
+.tmp.drivedownload/
 .tmp.driveupload/
 
 # 🐞 Logs
@@ -50,11 +51,4 @@ next-env.d.ts
 # 🔐 Variables de entorno (⚠️ nunca subir a GitHub)
 .env
 .env.* 
-!.env.example   # podés subir un .env.example con variables falsas
-
-# 🔥 Firebase
-firebase-debug.log
-firestore-debug.log
-
-.tmp.drivedownload/
-.tmp.driveupload/
+!.env.example     # podés subir un .env.example con variables falsas
