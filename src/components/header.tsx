@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { navLinks } from '@/lib/data';
+import { useState } from "react";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { navLinks } from "@/lib/data";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,13 +14,14 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex items-center">
           <a href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold font-headline sm:inline-block">
-              AP Software Solutions
+            <span className="font-bold font-headline text-2xl sm:text-2xl">
+              AP Software
             </span>
           </a>
         </div>
 
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+        {/* Menú desktop */}
+        <nav className="hidden items-center space-x-6 text-lg font-medium md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -32,6 +33,7 @@ export function Header() {
           ))}
         </nav>
 
+        {/* Menú mobile */}
         <div className="flex flex-1 items-center justify-end space-x-4">
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
@@ -42,16 +44,16 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left">
               <div className="flex flex-col space-y-4 p-4">
-                 <a href="/" className="mr-6 flex items-center space-x-2">
-                    <span className="font-bold font-headline sm:inline-block">
-                        AP Software Solutions
-                    </span>
-                 </a>
+                <a href="/" className="mr-6 flex items-center space-x-2">
+                  <span className="font-bold font-headline text-2xl">
+                    AP Software
+                  </span>
+                </a>
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-lg transition-colors hover:text-primary"
+                    className="text-xl transition-colors hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}

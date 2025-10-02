@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'AP Software Solutions',
+  title: 'AP Software',
   description: 'Portfolio de Agustín Pujol, Desarrollador de Software.',
 };
 
