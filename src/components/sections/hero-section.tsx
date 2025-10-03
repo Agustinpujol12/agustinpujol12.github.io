@@ -30,7 +30,7 @@ export function HeroSection() {
   {/* Botón al portfolio (Drive) */}
   <Button asChild size="lg">
     <a
-      href="https://drive.google.com/drive/folders/1SYJ3sT5cxPR0CBeX3jJWiVBpJdORaJCI" // 👈 tu link real
+      href="https://drive.google.com/drive/folders/1SYJ3sT5cxPR0CBeX3jJWiVBpJdORaJCI" 
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -52,16 +52,16 @@ export function HeroSection() {
           {/* Columna derecha: foto */}
           <div className="flex justify-center md:justify-end md:-ml-8">
             {/* md:-ml-8 → empuja la foto hacia el texto */}
-            <div className="relative">
-              <Image
-                src="/agustin-pujol.png"
-                alt="Foto de Agustín Pujol"
-                width={800}
-                height={800}
-                priority
-                className="rounded-3xl object-cover max-h-[480px] md:max-h-[520px] lg:max-h-[560px]"
-              />
-            </div>
+<div className="rounded-3xl border border-white/5 bg-background/30 shadow-sm p-1">
+  <Image
+    src="/agustin-pujol.png"
+    alt="Foto de Agustín Pujol"
+    width={800}
+    height={800}
+    priority
+    className="rounded-3xl object-cover max-h-[480px] md:max-h-[520px] lg:max-h-[560px]"
+  />
+</div>
           </div>
         </div>
       </div>

@@ -11,12 +11,14 @@ export const navLinks = [
 ];
 
 export const personalInfo = {
-    name: 'Agustín Pujol',
-    email: 'agustinpujol12@gmail.com',
-    github: 'https://github.com/Agustinpujol12',
-    cv: '/path-to-cv.pdf', // Placeholder
-    aboutMe: "Soy Agustín Pujol, un Estudiante de Ingeniería en Software con experiencia como Desarrollador Freelance. Mi enfoque se centra en la capacidad analítica para desglosar problemas complejos y aplicar soluciones de código limpio y valor. Como profesional entusiasta de la tecnología, busco proyectos que impulsen mi desarrollo y me permitan contribuir activamente al equipo, destacando siempre la organización, el liderazgo y la mejora constante."
+  name: 'Agustín Pujol',
+  email: 'agustinpujol12@gmail.com',
+  github: 'https://github.com/Agustinpujol12',
+  cv: '/path-to-cv.pdf', // Placeholder
+  aboutMe: "Me formé en la Universidad Siglo 21, donde adquirí una visión integral del desarrollo de software orientada a la calidad. He trabajado en proyectos que incluyen aplicaciones móviles y sitios web, aplicando buenas prácticas y priorizando siempre la experiencia de usuario.\n\nMi experiencia previa en gestión y liderazgo fortaleció competencias en organización, comunicación y resolución de problemas, que hoy aplico al ámbito tecnológico para coordinar tareas, colaborar en equipo y orientar proyectos hacia resultados concretos."
 };
+
+
 
 const notagusImage = PlaceHolderImages.find(p => p.id === 'notagus_app_image');
 const webdevImage = PlaceHolderImages.find(p => p.id === 'web_dev_image');
