@@ -42,15 +42,15 @@ export const projectsData = [
     image: webdevImage?.imageUrl,
     imageHint: webdevImage?.imageHint,
     },
-  {
-    title: 'Dashboard de Productividad Web',
-    description:'Aplicación web tipo dashboard para gestionar tareas, notas y métricas en tiempo real. Inspirada en la app Notagus pero adaptada a entorno web, con gráficas interactivas y diseño responsivo moderno.',
-    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'UX/UI', 'Charts'],
-    githubUrl: 'https://github.com/Agustinpujol12',
-    demoUrl: 'https://github.com/Agustinpujol12',
-    image: '/notagus_aplicacion.png', // 📌 imagen que está en /public
-    imageHint: 'Vista previa del dashboard web de productividad',
-  },
+{
+  title: "Mapa Interactivo de Argentina",
+  description:"Sitio web informativo con mapa de Argentina y secciones de lugares turísticos (Mar del Plata, Tigre Delta, etc.). Diseño limpio, tipografía clara y énfasis en accesibilidad y responsive.",
+  tags: ["HTML", "CSS", "JavaScript", "Responsive", "UI/UX"],
+  githubUrl: "https://github.com/Agustinpujol12/mapaargentina",
+  demoUrl: "https://mapa-beige.vercel.app", // si cambia, poné tu URL final aquí
+  image: "/mapa_argentina3.png", // imagen en /public
+  imageHint: "Captura del sitio Mapa de Argentina con secciones turísticas",
+},
 ];
 
 export type Skill = {

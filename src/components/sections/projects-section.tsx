@@ -19,67 +19,101 @@ export function ProjectsSection() {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
-            Portfolio: Desarrollos que Resuelven Problemas Reales
+            Mis proyectos de desarrollo
           </h2>
         </div>
 
-        {/* 🔥 Slider con Swiper */}
-        <Swiper
-          modules={[Navigation]}
-          navigation
-          loop={true}          // 👈 hace el carrusel circular
-          spaceBetween={24}
-          slidesPerView={1}
-          autoHeight={false}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-          }}
-          className="pb-12"
-        >
-          {projectsData.map((project, index) => (
-            <SwiperSlide key={index} className="flex">
-              <Card className="flex flex-col h-full w-full">
-                {project.image && (
-                  <div className="relative h-60 w-full">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="rounded-t-lg object-cover"
-                      data-ai-hint={project.imageHint}
-                    />
-                  </div>
-                )}
-                <CardHeader>
-                  <CardTitle className="font-headline">{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow space-y-4">
-                  <p className="text-muted-foreground">{project.description}</p>
-                </CardContent>
-                <CardFooter className="flex flex-col gap-4">
-                  {/* 🔹 Tags ahora arriba del botón */}
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <Button asChild className="w-full md:w-auto">
-                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      {project.title.includes("Notagus")
-                        ? "Ver Repositorio"
-                        : project.title.includes("Dashboard")
-                          ? "Ver Demo"
-                          : "Ver Más Proyectos"}
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {/* ── Wrapper relativo para posicionar flechas afuera ── */}
+        <div className="relative">
+          {/* Flecha izquierda (afuera) */}
+          <button
+            aria-label="Anterior"
+            className="projects-prev absolute top-1/2 -translate-y-1/2 -left-6 md:-left-10 z-20 group focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="h-10 w-10 md:h-12 md:w-12 text-primary"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M15 18l-6-6 6-6" /> {/* < */}
+            </svg>
+          </button>
+
+          {/* Flecha derecha (afuera) */}
+          <button
+            aria-label="Siguiente"
+            className="projects-next absolute top-1/2 -translate-y-1/2 -right-6 md:-right-10 z-20 group focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="h-10 w-10 md:h-12 md:w-12 text-primary"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M9 18l6-6-6-6" /> {/* > */}
+            </svg>
+          </button>
+
+          {/* 🔥 Slider con Swiper */}
+          <Swiper
+            modules={[Navigation]}
+            navigation={{ prevEl: ".projects-prev", nextEl: ".projects-next" }}
+            loop={true}
+            spaceBetween={24}
+            slidesPerView={1}
+            autoHeight={false}
+            breakpoints={{ 768: { slidesPerView: 2 } }}
+            className="pb-12"
+          >
+            {projectsData.map((project, index) => (
+              <SwiperSlide key={index} className="flex">
+                <Card className="flex flex-col h-full w-full">
+                  {project.image && (
+                    <div className="relative h-60 w-full">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="rounded-t-lg object-cover"
+                        data-ai-hint={project.imageHint}
+                      />
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="font-headline">{project.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow space-y-4">
+                    <p className="text-muted-foreground">{project.description}</p>
+                  </CardContent>
+                  <CardFooter className="flex flex-col gap-4">
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                      {project.tags.map((tag, tagIndex) => (
+                        <Badge key={tagIndex} variant="secondary">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    <Button asChild className="w-full md:w-auto">
+                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        Ver Repositorio
+                      </a>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </section>
   );
