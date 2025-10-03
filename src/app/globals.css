@@ -61,3 +61,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* 🔥 Igualar alturas como en grid */
+.swiper-wrapper {
+  align-items: stretch !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  height: auto !important;
+}

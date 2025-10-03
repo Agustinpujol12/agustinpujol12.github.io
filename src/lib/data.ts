@@ -41,7 +41,16 @@ export const projectsData = [
     demoUrl: 'https://github.com/Agustinpujol12',
     image: webdevImage?.imageUrl,
     imageHint: webdevImage?.imageHint,
-  }
+    },
+  {
+    title: 'Dashboard de Productividad Web',
+    description:'Aplicación web tipo dashboard para gestionar tareas, notas y métricas en tiempo real. Inspirada en la app Notagus pero adaptada a entorno web, con gráficas interactivas y diseño responsivo moderno.',
+    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'UX/UI', 'Charts'],
+    githubUrl: 'https://github.com/Agustinpujol12',
+    demoUrl: 'https://github.com/Agustinpujol12',
+    image: '/notagus_aplicacion.png', // 📌 imagen que está en /public
+    imageHint: 'Vista previa del dashboard web de productividad',
+  },
 ];
 
 export type Skill = {
