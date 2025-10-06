@@ -137,4 +137,5 @@ export const certificateImages: string[] = [
   "/certificates/certificado04.jpg",
   "/certificates/certificado05.jpg",
   "/certificates/certificado06.jpg",
+  "/certificates/certificado07.jpg"
 ];
