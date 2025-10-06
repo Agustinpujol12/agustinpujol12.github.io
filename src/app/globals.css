@@ -71,3 +71,12 @@ html {
   display: flex !important;
   height: auto !important;
 }
+
+/* Swiper pagination bullets blancos para Certificados */
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
