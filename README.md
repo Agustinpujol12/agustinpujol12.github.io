@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/ap_portfolio.png" alt="Agustín Pujol Portfolio logo" width="200"/>
+  <img src="public/ap_portfolio.png" alt="Agustín Pujol Portfolio logo" width="400"/>
 </p>
 
 <h1 align="center">Portafolio Web - Agustín Pujol</h1>
@@ -89,6 +89,4 @@ Su uso está permitido con fines **educativos, demostrativos o de referencia pro
 **Agustín Pujol**  
 Desarrollador de software | Android · Web · UX/UI  
 
-[🌐 Portfolio](https://agustinpujol12.github.io)  
 [💼 LinkedIn](https://www.linkedin.com/in/agustinpujol/)  
-[🐙 GitHub](https://github.com/Agustinpujol12)
