@@ -41,39 +41,36 @@ export const projectsData = [
     title: "Notagus: gestor de tareas, notas y calendario (Android nativo)",
     description:
       "Aplicación Android nativa desarrollada en Java para organizar tareas, notas, listas y eventos. Presenta un diseño moderno basado en Material Design 3, persistencia local con Room (SQLite), notificaciones programadas, widget de tareas y temas personalizables. Proyecto desarrollado y versionado íntegramente en Android Studio con Git/GitHub.",
-    tags: [
-      "Java",
-      "Android Studio",
-      "Room Database",
-      "SQLite",
-      "RecyclerView",
-      "Material Design 3",
-    ],
+    tags: ["Java", "Android Studio", "Room Database", "SQLite", "RecyclerView", "Material Design 3"],
     githubUrl: "https://github.com/Agustinpujol12/Notagus",
     demoUrl: "https://github.com/Agustinpujol12/Notagus",
+    caseStudyUrl: "https://drive.google.com/drive/folders/1gNZuVLHOOckx7B4QWZ50uQbiYMzDGa-i",
     image: notagusImage?.imageUrl,
     imageHint: notagusImage?.imageHint,
+    primaryAction: "drive", // 👈 principal: Ver Drive
   },
   {
     title: "Desarrollo web con React JS y APIs REST",
     description:
       "Implementación de soluciones front-end utilizando React JS para crear interfaces dinámicas. Consumo y gestión de datos con APIs REST y bases de datos MySQL, demostrando mi manejo del stack frontend y backend.",
     tags: ["React JS", "JavaScript", "HTML5", "CSS3", "REST API", "MySQL", "Postman"],
-    githubUrl: "https://github.com/Agustinpujol12",
-    demoUrl: "https://github.com/Agustinpujol12",
+    githubUrl: "https://github.com/Agustinpujol12/agustinpujol12.github.io",
+    demoUrl: "https://agustinpujol12.github.io/", // 👈 Ver Página
     image: webdevImage?.imageUrl,
     imageHint: webdevImage?.imageHint,
+    primaryAction: "web",
   },
-{
-  title: "Mapa Interactivo de Argentina",
-  description:
-    "Proyecto web educativo e interactivo que permite explorar las provincias de Argentina haciendo clic en el mapa. Cada provincia muestra una imagen representativa y una breve descripción informativa. Desarrollado con HTML, CSS y JavaScript nativo como práctica de desarrollo web inicial, con diseño inspirado en la bandera argentina y enfoque didáctico.",
-  tags: ["HTML5", "CSS3", "JavaScript", "Interactividad", "Educativo"],
-  githubUrl: "https://github.com/Agustinpujol12/mapaargentina",
-  demoUrl: "https://mapa-beige.vercel.app/",
-  image: "/mapa_argentina5.png",
-  imageHint: "Vista del sitio web interactivo de Argentina mostrando provincias y contenido educativo",
-},
+  {
+    title: "Mapa Interactivo de Argentina",
+    description:
+      "Proyecto web educativo e interactivo que permite explorar las provincias de Argentina haciendo clic en el mapa. Cada provincia muestra una imagen representativa y una breve descripción informativa. Desarrollado con HTML, CSS y JavaScript nativo como práctica de desarrollo web inicial, con diseño inspirado en la bandera argentina y enfoque didáctico.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Interactividad", "Educativo"],
+    githubUrl: "https://github.com/Agustinpujol12/mapaargentina",
+    demoUrl: "https://mapa-beige.vercel.app/",
+    image: "/mapa_argentina5.png",
+    imageHint: "Vista del sitio web interactivo de Argentina mostrando provincias y contenido educativo",
+    primaryAction: "web",
+  },
   {
     title: "Corplast S.R.L.: sitio web institucional",
     description:
@@ -82,19 +79,20 @@ export const projectsData = [
     githubUrl: "https://github.com/Agustinpujol12/Corplast",
     demoUrl: "https://corplast.vercel.app/",
     image: "/corplast2.png",
-    imageHint:
-      "Captura del sitio institucional Corplast S.R.L. con catálogo y diseño corporativo",
+    imageHint: "Captura del sitio institucional Corplast S.R.L. con catálogo y diseño corporativo",
+    primaryAction: "web",
   },
   {
-  title: "Testing QA: MiAutoRacing",
-  description:
-    "Diseño y ejecución de casos de prueba sobre la aplicación móvil Racing Engine Calculator (Android). Se realizaron pruebas funcionales, detección y documentación de bugs en Jira, con registro de resultados y sugerencias de mejora en Confluence. El proyecto incluyó la elaboración de un portfolio de testing con análisis detallado de incidencias, priorización y recomendaciones.",
-  tags: ["Testing QA", "Jira", "Confluence", "Android", "Documentación"],
-  githubUrl: "https://agustinpujol12.atlassian.net/jira/software/projects/REC/boards/4",
-  caseStudyUrl: "https://drive.google.com/drive/folders/XXXXXXXXXX", // (→ colocá tu enlace al Drive con el portfolio)
-  image: "/miautoracing.png", // podés usar la captura del backlog o un mockup que te genere si querés
-  imageHint: "Vista del proyecto de testing en Jira con backlog de tareas y reportes de bugs",
-}
+    title: "Testing QA: MiAutoRacing",
+    description:
+      "Diseño y ejecución de casos de prueba sobre la aplicación móvil Racing Engine Calculator (Android). Se realizaron pruebas funcionales, detección y documentación de bugs en Jira, con registro de resultados y sugerencias de mejora en Confluence. El proyecto incluyó la elaboración de un portfolio de testing con análisis detallado de incidencias, priorización y recomendaciones.",
+    tags: ["Testing QA", "Jira", "Confluence", "Android", "Documentación"],
+    githubUrl: "https://agustinpujol12.atlassian.net/jira/software/projects/REC/boards/4",
+    caseStudyUrl: "https://drive.google.com/drive/folders/1sBfO9_7kCJTFYNrKvAeR8vFe_HJwTeaE", // 👈 Ver Drive
+    image: "/miautoracing.png",
+    imageHint: "Vista del proyecto de testing en Jira con backlog de tareas y reportes de bugs",
+    primaryAction: "drive",
+  },
 ];
 
 export type Skill = {
