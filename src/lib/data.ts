@@ -49,17 +49,24 @@ export const projectsData = [
     imageHint: notagusImage?.imageHint,
     primaryAction: "drive", // 👈 principal: Ver Drive
   },
-  {
-    title: "Desarrollo web con React JS y APIs REST",
-    description:
-      "Implementación de soluciones front-end utilizando React JS para crear interfaces dinámicas. Consumo y gestión de datos con APIs REST y bases de datos MySQL, demostrando mi manejo del stack frontend y backend.",
-    tags: ["React JS", "JavaScript", "HTML5", "CSS3", "REST API", "MySQL", "Postman"],
-    githubUrl: "https://github.com/Agustinpujol12/agustinpujol12.github.io",
-    demoUrl: "https://agustinpujol12.github.io/", // 👈 Ver Página
-    image: webdevImage?.imageUrl,
-    imageHint: webdevImage?.imageHint,
-    primaryAction: "web",
-  },
+{
+  title: "Portafolio Web Personal",
+  description:
+    "Sitio web profesional desarrollado con Next.js 15, TypeScript y TailwindCSS para presentar mis proyectos, habilidades y trayectoria como desarrollador. Incluye secciones dinámicas, animaciones, slider de proyectos y despliegue automatizado en GitHub Pages.",
+  tags: [
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Framer Motion",
+    "shadcn/ui",
+    "React Icons",
+  ],
+  githubUrl: "https://github.com/Agustinpujol12/agustinpujol12.github.io",
+  demoUrl: "https://agustinpujol12.github.io/", // 👈 Ver Página
+  image: "/ap_portfolio.png",
+  imageHint: webdevImage?.imageHint,
+  primaryAction: "web",
+},
   {
     title: "Mapa Interactivo de Argentina",
     description:
