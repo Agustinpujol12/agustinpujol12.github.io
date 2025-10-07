@@ -108,29 +108,41 @@ export type Skill = {
 };
 
 export const skillsData: { [key: string]: Skill[] } = {
-  Desarrollo: [
+  "Lenguajes y Bases": [
     { name: "Java", icon: Code },
-    { name: "SQL", icon: Database },
+    { name: "TypeScript", icon: FileJson2 },
     { name: "JavaScript", icon: FileJson2 },
     { name: "HTML5", icon: Code },
     { name: "CSS3", icon: Paintbrush },
+    { name: "SQL / SQLite", icon: Database },
   ],
-  "Móvil/Android": [
+  "Desarrollo Web": [
+    { name: "React.js", icon: ReactIcon },
+    { name: "Next.js", icon: Network },
+    { name: "TailwindCSS", icon: Palette },
+    { name: "Framer Motion", icon: Palette },
+  ],
+  "Móvil / Android": [
     { name: "Android Studio", icon: Smartphone },
     { name: "Room Database", icon: Database },
-    { name: "Material Design", icon: Palette },
+    { name: "Material Design 3", icon: Palette },
+    { name: "RecyclerView", icon: Smartphone },
   ],
-  Web: [{ name: "React JS", icon: ReactIcon }],
   Backend: [
     { name: "REST API", icon: Network },
     { name: "MySQL", icon: Database },
   ],
-  "Control/Metodología": [
-    { name: "Git/GitHub", icon: Github },
-    { name: "Jira/Confluence", icon: Book },
+  "Control y Metodología": [
+    { name: "Git / GitHub", icon: Github },
+    { name: "Jira / Confluence", icon: Book },
     { name: "Scrum", icon: Users },
     { name: "JUnit", icon: TestTube },
     { name: "Postman", icon: Send },
+  ],
+  "Testing y QA": [
+    { name: "Testing Manual", icon: TestTube },
+    { name: "Casos de Prueba", icon: Book },
+    { name: "Documentación QA", icon: Book },
   ],
 };
 
