@@ -100,6 +100,23 @@ export const projectsData = [
     imageHint: "Vista del proyecto de testing en Jira con backlog de tareas y reportes de bugs",
     primaryAction: "drive",
   },
+  {
+    title: "Playbook Táctico CS2",
+    description:
+      "Plataforma web privada para la gestión y visualización de estrategias para equipos de CS2. Incluye un sistema de autenticación (login) para miembros sus miembros. Utiliza PostgreSql como base de datos para persistir las jugadas, videos y tácticas, facilitando el análisis y aprendizaje.",
+    tags: [
+        "Next.js", 
+        "TypeScript", 
+        "TailwindCSS", 
+        "NextAuth",
+        "PostgreSql"
+    ],
+    githubUrl: "https://github.com/Agustinpujol12/playbook",
+    demoUrl: "https://playbook-omega-one.vercel.app/", // Opcional: si tienes un deploy
+    image: "/playbook.png", // Ej: "/playbook_cover.png"
+    imageHint: "Vista previa de la aplicación de playbook táctico de CS2",
+    primaryAction: "web", // O "github" si no hay demo
+  },
 ];
 
 export type Skill = {
@@ -154,5 +171,6 @@ export const certificateImages: string[] = [
   "/certificates/certificado04.jpg",
   "/certificates/certificado05.jpg",
   "/certificates/certificado06.jpg",
-  "/certificates/certificado07.jpg"
+  "/certificates/certificado07.jpg",
+  "/certificates/certificado08.png"
 ];
